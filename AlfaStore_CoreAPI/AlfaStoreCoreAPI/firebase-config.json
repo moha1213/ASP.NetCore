@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "alfastorecoreapi",
+  "private_key_id": "10bb369ce80cb50f0e06f3455ac10c49ef84fc19",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCpzugvrYyeDI8K\nV8Zaz/qWHhvHlRfsKo3bYzyMuehjyv3bZ32EP2rqFAiKEaPLnT1qhJEARh4L5AVb\nwYecDM27cgpFNytDvzGh1O/8vjlCVG17BEvBj+6VuixBGNb5GtUqHq3izMydvaAS\nR6IQpMDY4X/yUsCTJ1NMxpBugNdV3yXnfb7xnIwEmnrYire47u6RFOWNsLNP8BE7\n/4H45YdMXWBUfStN8cneXNrMwI43REG3V9fOBLF0lqdd/QdDH4I/6xyI6L31895C\nZ74+3xJnnAC27Psy4eOJhFAfeDuKiPlSwVT28qmJ6tOaaA2InLnOo1jYf+rGbqTx\nFWLTgCN7AgMBAAECggEAAUOxJum76lFdn04YBAUYcJW4zzuk+fU3KTML+GBKArQ4\nP7H9lUaDnUqY5a5L8fAxzOE/0yiygJQqFgzS3a6auZKX0PwgLlj2HaZgQxmHg57t\nUcUuazqPJD5GphVxRFmWzMF9ufqca3BGCNzPsCAJ75N+SGelV3Mrg57W5HvBHrqP\nisrLeVdzdJ4l5saz9Zs4etMbyURI6mLxCBYonG+15DZ2Uo6wMZa7PnMHvKIFxXSR\nUFSRAH2oMD3Y8c3AVohkld+FUlK/AsjLwSgAsboAZHOq/cVwmHSNkf5VjKuAfYme\nXf9s2ZY20F52iQe85JSS6IJwgj5KX4SpSWvmIQFlAQKBgQDRcW5ptE8p9AOC+KHl\niBdT2Min34YGsH59dvbyc49dUtV4iG300ME5hk6j0rvgyAVzRZHLqzGuc9/W9uk0\nxMGbr9KJBKvIWeOb9uZu8hNiwzjyxkhaJxdC6DdJbSuON12TcUrUU1xDcVY+glbr\nF31ETUcCiPISXzN1h7z6oa8fUQKBgQDPjgOnAQOFs2ut8npFcDkiClmPUc0znWuW\nYLynVwECJWkyzaCnp7iFO5V2GqtI/LT115thnTuSyy/lkbqRS59pkiN9kMrytVhe\npdyquH8Ilaqw227tsPWhZH+gZjT8hGx/QyVFWqLHXSgK3jf+mlIWgsCGNwDuiU+/\nGxV+zVhbCwKBgFcrKpT74mbHlB6SdG8fcPYIp5qWwSVPl5WISccmqWhh7U65GWpm\n58SVTW2Ja4BmPz52mfN2ULsWpvbE1NKNgTbWun0kYIqGPuDOpaFPRxo3vh/svngn\nBNtn4nrA4PvTtzKCWG5+M0wug4KIpLw7jns63m8DqBxVWwlzcQeu+z/BAoGALjwd\nditUpIj2WLZmJGe+YmXZ04JOaswLdmEwRTqtX9QDniyOOCq1gQBn5/pC46xfh1Az\nLch/x9B5Z/NRkyI8baD/RO5nNy/McrER+fnFWp00e9c1278KyJwBjjKWZRX+sU68\n07k//5cx31HnOVEZLiiMSJmiHID8Ab8/x5Jot0cCgYA6zaa0jicpO7MF4G5lYbxR\nU78OZGMdkgOeqQPSF5JidqD/JRxcKmk3QDoDY9Xxrmc0O0/dSY79f4V+++HJX+JP\nt07NkHBk8YlPSjRyZ3+7BKpEFsnrxEQVWgnSJs3XlxS4DA9ApIeIIRSJUqU16EDM\nak7dETPlt3B1SFPG4a9JhQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-m5hjh@alfastorecoreapi.iam.gserviceaccount.com",
+  "client_id": "113728936397342816864",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-m5hjh%40alfastorecoreapi.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

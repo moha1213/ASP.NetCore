@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "aJzGknibO6bSavqVnYYQpMyX93ORnOCTjC0J6VfZz0c=",
+  "Source": "AlfaStoreCoreAPI",
+  "BasePath": "_content/AlfaStoreCoreAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

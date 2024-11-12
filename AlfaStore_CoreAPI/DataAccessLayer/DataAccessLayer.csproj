@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Asset.cs" />
+    <Compile Remove="Models\AssetDeprecation.cs" />
+    <Compile Remove="Models\AssetDeprecationDetails.cs" />
+    <Compile Remove="Models\CostCenter.cs" />
+    <Compile Remove="Models\Customer.cs" />
+    <Compile Remove="Models\ErrorModel.cs" />
+    <Compile Remove="Models\Item.cs" />
+    <Compile Remove="Models\ItemPrice.cs" />
+    <Compile Remove="Models\ItemSuppliers.cs" />
+    <Compile Remove="Models\MType.cs" />
+    <Compile Remove="Models\Payment.cs" />
+    <Compile Remove="Models\PaymentSchedule.cs" />
+    <Compile Remove="Models\PurchaseInvoiceItem.cs" />
+    <Compile Remove="Models\Role.cs" />
+    <Compile Remove="Models\RoleScreen.cs" />
+    <Compile Remove="Models\RoleScreenDetails.cs" />
+    <Compile Remove="Models\Screen.cs" />
+    <Compile Remove="Models\ScreenDefaults.cs" />
+    <Compile Remove="Models\SearchModel.cs" />
+    <Compile Remove="Models\StoreTransaction.cs" />
+    <Compile Remove="Models\StoreTransactionDetails.cs" />
+    <Compile Remove="Models\StoreTransfere.cs" />
+    <Compile Remove="Models\StoreTransfereDetails.cs" />
+    <Compile Remove="Models\Supplier.cs" />
+    <Compile Remove="Models\Tax.cs" />
+    <Compile Remove="Models\UiElementInfo.cs" />
+    <Compile Remove="Models\UOM.cs" />
+    <Compile Remove="Models\UserRole.cs" />
+    <Compile Remove="Models\UserRoleScreenDefaults.cs" />
+    <Compile Remove="Models\Warehouse.cs" />
+    <Compile Remove="Models\WarehouseItems.cs" />
+    <Compile Remove="Models\Wolrd.cs" />
+    <Compile Remove="Utilities\DALBag.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+
+</Project>
