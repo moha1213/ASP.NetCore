@@ -9,10 +9,10 @@ using System.Diagnostics.Metrics;
 
 namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.ModelsMutation
 {
-    public class MutationDistrict : ISave<District>
+    public partial class Mutation 
     {
         [Authorize]
-        public async Task<District> Save([Service] MyAppContext context, District model, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
+        public async Task<District> SaveDistrict([Service] MyAppContext context, District model, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
         {
             try
             {
@@ -23,11 +23,11 @@ namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.ModelsMutation
 
                 if (model.Id.HasValue)
                 {
-                    context.Update(model);
+                    context.districts.Update(model);
                 }
                 else
                 {
-                    context.Add(model);
+                    context.districts.Add(model);
                 }
                 await context.SaveChangesAsync();
                 return model;
@@ -38,7 +38,7 @@ namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.ModelsMutation
             }
         }
         [Authorize]
-        public async Task<IQueryable<District>> Save([Service] MyAppContext context, IQueryable<District> modelList, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
+        public async Task<IQueryable<District>> SaveDistricts([Service] MyAppContext context, IQueryable<District> modelList, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
         {
             try
             {

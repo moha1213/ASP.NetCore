@@ -7,12 +7,12 @@ using System.Security.Claims;
 using FirebaseAdminAuthentication.DependencyInjection.Models;
 using System.Diagnostics.Metrics;
 
-namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.MutationModels
+namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.ModelsMutation
 {
-    public class MutationUserProfile : ISave<UserProfile>
+    public partial class Mutation 
     {
         [Authorize]
-        public async Task<UserProfile> Save([Service] MyAppContext context, UserProfile model, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
+        public async Task<UserProfile> SaveUserProfile([Service] MyAppContext context, UserProfile model, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
         {
             try
             {
@@ -23,11 +23,11 @@ namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.MutationModels
 
                 if (model.Id.HasValue)
                 {
-                    context.Update(model);
+                    context.users.Update(model);
                 }
                 else
                 {
-                    context.Add(model);                  
+                    context.users.Add(model);                  
                 }
                 await context.SaveChangesAsync();
                 return model;
@@ -38,7 +38,7 @@ namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.MutationModels
             }
         }
         [Authorize]
-        public async Task<IQueryable<UserProfile>> Save([Service] MyAppContext context, IQueryable<UserProfile> modelList, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
+        public async Task<IQueryable<UserProfile>> SaveUserProfiles([Service] MyAppContext context, IQueryable<UserProfile> modelList, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
         {
             try
             {

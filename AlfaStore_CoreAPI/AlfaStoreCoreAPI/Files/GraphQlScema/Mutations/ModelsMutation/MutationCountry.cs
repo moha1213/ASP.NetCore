@@ -7,12 +7,12 @@ using System.Security.Claims;
 using FirebaseAdminAuthentication.DependencyInjection.Models;
 using System.Diagnostics.Metrics;
 
-namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.MutationModels
+namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.ModelsMutation
 {
-    public class MutationCountry : ISave<Country>
+    public partial class Mutation 
     {
         [Authorize]
-        public async Task<Country> Save([Service] MyAppContext context, Country model, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
+        public async Task<Country> SaveCountry([Service] MyAppContext context, Country model, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
         {
             try
             {
@@ -23,14 +23,14 @@ namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.MutationModels
 
                 if (model.Id.HasValue)
                 {
-                    context.Update(model);
+                    context.Countries.Update(model);
 
                     string createdCourse = $"{model.Id}_{nameof(Subscribtion.CountryUpdated)}";
                     await topicEventSender.SendAsync(createdCourse, model);
                 }
                 else
                 {
-                    context.Add(model);
+                    context.Countries.Add(model);
                     string createdCourse = $"{model.Id}_{nameof(Subscribtion.CountryCreated)}";
                     await topicEventSender.SendAsync(createdCourse, model);
                 }
@@ -43,7 +43,7 @@ namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.MutationModels
             }
         }
         [Authorize]
-        public async Task<IQueryable<Country>> Save([Service] MyAppContext context, IQueryable<Country> modelList, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
+        public async Task<IQueryable<Country>> SaveCountries([Service] MyAppContext context, IQueryable<Country> modelList, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
         {
             try
             {

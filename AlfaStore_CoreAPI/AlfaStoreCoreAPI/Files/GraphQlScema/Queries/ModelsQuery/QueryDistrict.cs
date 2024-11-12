@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AlfaStoreCoreAPI.Files.GraphQlScema.Queries.ModelsQuery
 {
-    public class QueryDistrict : ISearch<District>
+    public partial class Query
     {
-        public async Task<District> GetOne([Service] MyAppContext appContext, Guid guid)
+        public async Task<District> Getdistrict([Service] MyAppContext appContext, Guid guid)
         {
             var res = await appContext.districts.FindAsync(guid, CancellationToken.None);
             return res;
@@ -16,7 +16,7 @@ namespace AlfaStoreCoreAPI.Files.GraphQlScema.Queries.ModelsQuery
         [UseProjection]
         [UseFiltering]
         [UseSorting]
-        public async Task<List<District>> GetMany([Service] MyAppContext appContext)
+        public async Task<List<District>> Getdistricts([Service] MyAppContext appContext)
         {
             var res = await appContext.districts.Include(c => c.City).ThenInclude(d => d.Country).ToListAsync();
             return res;

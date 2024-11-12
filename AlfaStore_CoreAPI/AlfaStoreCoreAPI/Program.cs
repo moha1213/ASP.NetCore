@@ -1,7 +1,9 @@
 using AlfaStoreCoreAPI.Files.DB;
-using AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.MutationModels;
+using AlfaStoreCoreAPI.Files.GraphQlScema.Mutations;
+using AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.ModelsMutation;
 using AlfaStoreCoreAPI.Files.GraphQlScema.Queries.ModelsQuery;
 using AlfaStoreCoreAPI.Files.GraphQlScema.Subscriptions;
+using DataAccessLayer;
 using FirebaseAdmin;
 using FirebaseAdminAuthentication.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Mvc;
@@ -16,9 +18,11 @@ builder.Services.AddRazorPages();
 builder.Services.AddControllers();
 builder.Services.AddDbContextFactory<MyAppContext>(opt => opt.UseSqlServer());
 builder.Services.AddScoped<MyAppContext>(sp => sp.GetRequiredService<IDbContextFactory<MyAppContext>>().CreateDbContext());
-builder.Services.AddGraphQLServer().AddQueryType<QueryCountry>()
+builder.Services.AddGraphQLServer()
+    .AddQueryType<Query>()
+    .AddMutationType<Mutation>()   
     .AddProjections().AddFiltering().AddSorting()
-    .AddMutationType<MutationCountry>().AddInMemorySubscriptions()
+    .AddInMemorySubscriptions()
     .AddSubscriptionType<Subscribtion>().AddAuthorization();
 
 builder.Services.AddSingleton(FirebaseApp.Create());

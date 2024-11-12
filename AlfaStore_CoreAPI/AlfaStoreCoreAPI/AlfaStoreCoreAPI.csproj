@@ -12,6 +12,7 @@
     <Compile Remove="Controllers\CrudController.cs" />
     <Compile Remove="Controllers\DistrictController.cs" />
     <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="Files\GraphQlScema\Mutations\Mutation.cs" />
     <Compile Remove="IController\ICrudController.cs" />
   </ItemGroup>
 

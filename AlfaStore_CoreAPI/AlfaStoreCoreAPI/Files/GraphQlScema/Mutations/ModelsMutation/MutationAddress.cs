@@ -9,10 +9,10 @@ using System.Diagnostics.Metrics;
 
 namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.ModelsMutation
 {
-    public class MutationAddress : ISave<Address>
+    public partial class Mutation 
     {
         [Authorize]
-        public async Task<Address> Save([Service] MyAppContext context, Address model, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
+        public async Task<Address> SaveAddress([Service] MyAppContext context, Address model, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
         {
             try
             {
@@ -23,11 +23,11 @@ namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.ModelsMutation
 
                 if (model.Id.HasValue)
                 {
-                    context.Update(model);
+                    context.addresses.Update(model);
                 }
                 else
                 {
-                    context.Add(model);
+                    context.addresses.Add(model);
                 }
                 await context.SaveChangesAsync();
                 return model;
@@ -38,7 +38,7 @@ namespace AlfaStoreCoreAPI.Files.GraphQlScema.Mutations.ModelsMutation
             }
         }
         [Authorize]
-        public async Task<IQueryable<Address>> Save([Service] MyAppContext context, IQueryable<Address> modelList, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
+        public async Task<IQueryable<Address>> SaveAddresses([Service] MyAppContext context, IQueryable<Address> modelList, ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
         {
             try
             {
